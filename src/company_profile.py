@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 import logging.config
 from dotenv import load_dotenv
-
+from pathlib import Path
 
 load_dotenv()
 
@@ -44,6 +44,8 @@ logger = logging.getLogger(__name__)
 
 api_key = os.getenv("FMP_API_KEY")
 
+#Extraction
+
 def extract_company_info(symbol):
     try:
         logger.debug(f"Starting extraction for: {symbol}")
@@ -54,7 +56,7 @@ def extract_company_info(symbol):
         r = requests.get(url, params=params, timeout=10)
         logger.debug(f"Request sent for: {symbol}")
         r.raise_for_status()
-        logger.debug(f"Response received with status {r.status_code} for: {symbol}")
+        logger.debug(f"Response received with status {r.status_code} for {symbol}")
         data = r.json()
         if not data:
             logger.warning(f"No data found for: {symbol}")
@@ -78,6 +80,16 @@ def extract_company_info(symbol):
     except requests.exceptions.RequestException as request_except:
         logger.error(f"Request exception for {symbol}: {request_except}")
 
+def save_raw_data(dataframe):
+    try: 
+        output_path = Path("data/raw/company_data.csv")
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        dataframe.to_csv(output_path, index=False)
+        logger.info(f"File creation completed: {output_path}")
+
+    except OSError as os_err:
+        logger.error(f"Error with entry/output {os_err}")
+
 def extract_companies_info(*args):
     essential = []
     for company_info in args:
@@ -88,7 +100,8 @@ def extract_companies_info(*args):
         logger.warning(f"No data found for requested symbols: {args}") 
         return None            
     all_df = pd.concat(essential, ignore_index=True)
+    save_raw_data(all_df)
     return all_df
-
-
-print(extract_companies_info("xxxxx", "yyyy"))
+    
+result = extract_companies_info("AAPL", "afegdgssdg", "NVDA")
+print(result)
