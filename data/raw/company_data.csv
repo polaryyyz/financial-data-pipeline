@@ -1,3 +1,4 @@
 symbol,companyName,price,marketCap,sector,industry,country,exchange
-AAPL,Apple Inc.,311.9,4580986336400,Technology,Consumer Electronics,US,NASDAQ
-NVDA,NVIDIA Corporation,209.255,5068365355000,Technology,Semiconductors,US,NASDAQ
+AAPL,Apple Inc.,310.34,4558074061040,Technology,Consumer Electronics,US,NASDAQ
+MSFT,Microsoft Corporation,487.31,3618544770500,Technology,Software - Infrastructure,US,NASDAQ
+NVDA,NVIDIA Corporation,208.48,5049594080000,Technology,Semiconductors,US,NASDAQ

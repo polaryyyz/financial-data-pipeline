@@ -103,5 +103,27 @@ def extract_companies_info(*args):
     save_raw_data(all_df)
     return all_df
     
-result = extract_companies_info("AAPL", "afegdgssdg", "NVDA")
-print(result)
+result = extract_companies_info("AAPL", "MSFT", "NVDA")
+
+
+def transform_company_data(dataframe):
+    duplicates = dataframe.duplicated().sum()
+    if duplicates > 0:
+        logger.warning(f"{duplicates} duplicate rows found")
+        dataframe = dataframe.drop_duplicates()
+    invalid_rows = (
+        (dataframe["price"] <= 0)
+        | (dataframe["marketCap"] <= 0)
+        )
+    invalid_count = invalid_rows.sum()
+    if invalid_count > 0:
+        logger.warning(f"{invalid_count} rows with invalid price or marketCap found")
+        dataframe = dataframe[~invalid_rows]
+    dataframe["marketCap_billions"] = dataframe["marketCap"] / 1000000000
+    logger.info("Company data transformation completed")
+    return dataframe    
+
+test = result.copy()
+test.loc[0, "price"] = -10
+
+transform_company_data(test)
