@@ -1,0 +1,4 @@
+symbol,companyName,price,marketCap,sector,industry,country,exchange,marketCap_billions
+AAPL,Apple Inc.,310.34,4558074061040,Technology,Consumer Electronics,US,NASDAQ,4558.07
+MSFT,Microsoft Corporation,487.31,3618544770500,Technology,Software - Infrastructure,US,NASDAQ,3618.54
+NVDA,NVIDIA Corporation,208.48,5049594080000,Technology,Semiconductors,US,NASDAQ,5049.59

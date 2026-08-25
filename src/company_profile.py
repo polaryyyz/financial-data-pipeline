@@ -88,7 +88,7 @@ def save_raw_data(dataframe):
         logger.info(f"File creation completed: {output_path}")
 
     except OSError as os_err:
-        logger.error(f"Error with entry/output {os_err}")
+        logger.error(f"Error with input/output: {os_err}")
 
 def extract_companies_info(*args):
     essential = []
@@ -103,9 +103,6 @@ def extract_companies_info(*args):
     save_raw_data(all_df)
     return all_df
     
-result = extract_companies_info("AAPL", "MSFT", "NVDA")
-
-
 def transform_company_data(dataframe):
     duplicates = dataframe.duplicated().sum()
     if duplicates > 0:
@@ -119,11 +116,23 @@ def transform_company_data(dataframe):
     if invalid_count > 0:
         logger.warning(f"{invalid_count} rows with invalid price or marketCap found")
         dataframe = dataframe[~invalid_rows]
-    dataframe["marketCap_billions"] = dataframe["marketCap"] / 1000000000
+    dataframe["marketCap_billions"] = (dataframe["marketCap"] / 1000000000).round(2)
+
     logger.info("Company data transformation completed")
     return dataframe    
 
-test = result.copy()
-test.loc[0, "price"] = -10
+def save_clean_data(dataframe):
+    try: 
+        output_path = Path("data/processed/company_data_clean.csv")
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        dataframe.to_csv(output_path, index=False)
+        logger.info(f"Clean file creation completed: {output_path}")
 
-transform_company_data(test)
+    except OSError as os_err:
+        logger.error(f"Error with input/output: {os_err}")
+
+result = extract_companies_info("AAPL", "MSFT", "NVDA")
+
+clean_data = transform_company_data(result)
+
+save_clean_data(clean_data)
