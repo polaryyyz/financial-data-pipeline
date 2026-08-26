@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from pathlib import Path
 
 load_dotenv()
+api_key = os.getenv("FMP_API_KEY")
 
 config = {
      "version": 1,
@@ -35,16 +36,6 @@ config = {
 }
 logging.config.dictConfig(config)
 logger = logging.getLogger(__name__)
-
-#logging.basicConfig(
-#                level = logging.DEBUG,
-#                format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-#                filename = "logs/pipeline.log"
-#            )
-
-api_key = os.getenv("FMP_API_KEY")
-
-#Extraction
 
 def extract_company_info(symbol):
     try:
@@ -130,9 +121,3 @@ def save_clean_data(dataframe):
 
     except OSError as os_err:
         logger.error(f"Error with input/output: {os_err}")
-
-result = extract_companies_info("AAPL", "MSFT", "NVDA")
-
-clean_data = transform_company_data(result)
-
-save_clean_data(clean_data)
