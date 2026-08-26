@@ -24,7 +24,8 @@ API → Python ETL → Data Cleaning → PostgreSQL → Analytics
 🚧 Project in development
 
 - [X] API data extraction
-- [ ] Data cleaning
+- [X] Data cleaning
+- [ ] Unit testing
 - [ ] Database creation
 - [ ] SQL analysis
 - [ ] Dashboard
