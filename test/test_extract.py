@@ -1,7 +1,6 @@
 from unittest.mock import patch, MagicMock, call
 from src.extract import extract_company_info
 from src.extract import extract_companies_info
-import src.extract 
 import requests
 
 def test_extract_company_info():
