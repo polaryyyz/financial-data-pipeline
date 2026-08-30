@@ -43,8 +43,44 @@ def test_main():
 
                 with patch("src.main.save_clean_data") as mock_save_clean:
                     main()
-
-                    mock_extract.assert_called_once_with("aferzfggdf")
+                    symbols = (
+                        "AAPL",
+                        "MSFT",
+                        "NVDA",
+                        "AMZN",
+                        "GOOGL",
+                        "META",
+                        "TSLA",
+                        "NFLX",
+                        "AMD",
+                        "INTC",
+                        "JPM",
+                        "V",
+                        "MA",
+                        "WMT",
+                        "COST",
+                        "JNJ",
+                        "PG",
+                        "KO",
+                        "XOM",
+                        "CAT"
+                    )
+                    mock_extract.assert_called_once_with(*symbols)
                     mock_save_raw.assert_called_once_with(data)
                     mock_transform.assert_called_once_with(data)
                     mock_save_clean.assert_called_once_with(clean_data)
+
+def test_main_no_data(caplog):
+    with patch("src.main.extract_companies_info") as mock_extract:
+            mock_extract.return_value = None
+    
+            with patch("src.main.save_raw_data") as mock_save_raw:
+                with patch("src.main.transform_company_data") as mock_transform:
+                    with patch("src.main.save_clean_data") as mock_save_clean:
+                        main()
+
+                        assert "Pipeline stopped: no data extracted" in caplog.text
+    
+                        mock_save_raw.assert_not_called()
+                        mock_transform.assert_not_called()
+                        mock_save_clean.assert_not_called()

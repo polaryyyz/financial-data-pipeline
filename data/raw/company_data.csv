@@ -1,4 +1,21 @@
 symbol,companyName,price,marketCap,sector,industry,country,exchange
-AAPL,Apple Inc.,310.34,4558074061040,Technology,Consumer Electronics,US,NASDAQ
-MSFT,Microsoft Corporation,487.31,3618544770500,Technology,Software - Infrastructure,US,NASDAQ
-NVDA,NVIDIA Corporation,208.48,5049594080000,Technology,Semiconductors,US,NASDAQ
+AAPL,Apple Inc.,319.7,4695547713200.0,Technology,Consumer Electronics,US,NASDAQ
+MSFT,Microsoft Corporation,513.53,3813242691500.0,Technology,Software - Infrastructure,US,NASDAQ
+NVDA,NVIDIA Corporation,217.55,5269278550000.0,Technology,Semiconductors,US,NASDAQ
+AMZN,"Amazon.com, Inc.",266.43,2866014153000.0,Consumer Cyclical,Specialty Retail,US,NASDAQ
+GOOGL,Alphabet Inc.,346.59,4194470750615.0005,Communication Services,Internet Content & Information,US,NASDAQ
+META,"Meta Platforms, Inc.",578.02,1472498187191.0,Communication Services,Internet Content & Information,US,NASDAQ
+TSLA,"Tesla, Inc.",348.75,1377404653658.0,Consumer Cyclical,Auto - Manufacturers,US,NASDAQ
+NFLX,"Netflix, Inc.",81.72,340277176718.0,Communication Services,Entertainment,US,NASDAQ
+AMD,"Advanced Micro Devices, Inc.",465.58,759174748000.0,Technology,Semiconductors,US,NASDAQ
+INTC,Intel Corp.,89.47,451286657364.0,Technology,Semiconductors,US,NASDAQ
+JPM,JPMorgan Chase & Co.,357.62,958246366200.0,Financial Services,Banks - Diversified,US,NYSE
+V,Visa Inc.,381.6,712465215718.0,Financial Services,Financial - Credit Services,US,NYSE
+MA,Mastercard Incorporated,595.3,522099530800.0,Financial Services,Financial - Credit Services,US,NYSE
+WMT,Walmart Inc.,103.09,820398467200.0,Consumer Defensive,Discount Stores,US,NASDAQ
+COST,Costco Wholesale Corporation,945.47,419296090130.0,Consumer Defensive,Discount Stores,US,NASDAQ
+JNJ,Johnson & Johnson,268.04,645949171425.0,Healthcare,Drug Manufacturers - General,US,NYSE
+PG,The Procter & Gamble Company,143.76,341747556783.0,Consumer Defensive,Household & Personal Products,US,NYSE
+KO,The Coca-Cola Company,89.66,385766537422.0,Consumer Defensive,Beverages - Non-Alcoholic,US,NYSE
+XOM,Exxon Mobil Corporation,156.7,649436882000.0,Energy,Oil & Gas Integrated,US,NYSE
+CAT,Caterpillar Inc.,800.25,368624759250.0,Industrials,Agricultural - Machinery,US,NYSE

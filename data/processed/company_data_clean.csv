@@ -1,4 +1,21 @@
 symbol,companyName,price,marketCap,sector,industry,country,exchange,marketCap_billions
-AAPL,Apple Inc.,310.34,4558074061040,Technology,Consumer Electronics,US,NASDAQ,4558.07
-MSFT,Microsoft Corporation,487.31,3618544770500,Technology,Software - Infrastructure,US,NASDAQ,3618.54
-NVDA,NVIDIA Corporation,208.48,5049594080000,Technology,Semiconductors,US,NASDAQ,5049.59
+AAPL,Apple Inc.,319.7,4695547713200.0,Technology,Consumer Electronics,US,NASDAQ,4695.55
+MSFT,Microsoft Corporation,513.53,3813242691500.0,Technology,Software - Infrastructure,US,NASDAQ,3813.24
+NVDA,NVIDIA Corporation,217.55,5269278550000.0,Technology,Semiconductors,US,NASDAQ,5269.28
+AMZN,"Amazon.com, Inc.",266.43,2866014153000.0,Consumer Cyclical,Specialty Retail,US,NASDAQ,2866.01
+GOOGL,Alphabet Inc.,346.59,4194470750615.0005,Communication Services,Internet Content & Information,US,NASDAQ,4194.47
+META,"Meta Platforms, Inc.",578.02,1472498187191.0,Communication Services,Internet Content & Information,US,NASDAQ,1472.5
+TSLA,"Tesla, Inc.",348.75,1377404653658.0,Consumer Cyclical,Auto - Manufacturers,US,NASDAQ,1377.4
+NFLX,"Netflix, Inc.",81.72,340277176718.0,Communication Services,Entertainment,US,NASDAQ,340.28
+AMD,"Advanced Micro Devices, Inc.",465.58,759174748000.0,Technology,Semiconductors,US,NASDAQ,759.17
+INTC,Intel Corp.,89.47,451286657364.0,Technology,Semiconductors,US,NASDAQ,451.29
+JPM,JPMorgan Chase & Co.,357.62,958246366200.0,Financial Services,Banks - Diversified,US,NYSE,958.25
+V,Visa Inc.,381.6,712465215718.0,Financial Services,Financial - Credit Services,US,NYSE,712.47
+MA,Mastercard Incorporated,595.3,522099530800.0,Financial Services,Financial - Credit Services,US,NYSE,522.1
+WMT,Walmart Inc.,103.09,820398467200.0,Consumer Defensive,Discount Stores,US,NASDAQ,820.4
+COST,Costco Wholesale Corporation,945.47,419296090130.0,Consumer Defensive,Discount Stores,US,NASDAQ,419.3
+JNJ,Johnson & Johnson,268.04,645949171425.0,Healthcare,Drug Manufacturers - General,US,NYSE,645.95
+PG,The Procter & Gamble Company,143.76,341747556783.0,Consumer Defensive,Household & Personal Products,US,NYSE,341.75
+KO,The Coca-Cola Company,89.66,385766537422.0,Consumer Defensive,Beverages - Non-Alcoholic,US,NYSE,385.77
+XOM,Exxon Mobil Corporation,156.7,649436882000.0,Energy,Oil & Gas Integrated,US,NYSE,649.44
+CAT,Caterpillar Inc.,800.25,368624759250.0,Industrials,Agricultural - Machinery,US,NYSE,368.62

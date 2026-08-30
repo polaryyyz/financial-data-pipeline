@@ -6,7 +6,29 @@ from src.transform import transform_company_data
 from src.load import save_raw_data,save_clean_data
 
 def main():
-    result = extract_companies_info("aferzfggdf")
+    symbols = (
+        "AAPL",
+        "MSFT",
+        "NVDA",
+        "AMZN",
+        "GOOGL",
+        "META",
+        "TSLA",
+        "NFLX",
+        "AMD",
+        "INTC",
+        "JPM",
+        "V",
+        "MA",
+        "WMT",
+        "COST",
+        "JNJ",
+        "PG",
+        "KO",
+        "XOM",
+        "CAT"   
+    )
+    result = extract_companies_info(*symbols)
 
     if result is None:
         logging.error("Pipeline stopped: no data extracted")
