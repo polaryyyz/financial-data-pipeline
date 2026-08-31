@@ -1,6 +1,7 @@
 from unittest.mock import patch
 from src.main import main
 from src.config import logging_config
+from src.config.symbols import SYMBOLS
 import pandas as pd
 
 def test_main():
@@ -43,29 +44,7 @@ def test_main():
 
                 with patch("src.main.save_clean_data") as mock_save_clean:
                     main()
-                    symbols = (
-                        "AAPL",
-                        "MSFT",
-                        "NVDA",
-                        "AMZN",
-                        "GOOGL",
-                        "META",
-                        "TSLA",
-                        "NFLX",
-                        "AMD",
-                        "INTC",
-                        "JPM",
-                        "V",
-                        "MA",
-                        "WMT",
-                        "COST",
-                        "JNJ",
-                        "PG",
-                        "KO",
-                        "XOM",
-                        "CAT"
-                    )
-                    mock_extract.assert_called_once_with(*symbols)
+                    mock_extract.assert_called_once_with(*SYMBOLS)
                     mock_save_raw.assert_called_once_with(data)
                     mock_transform.assert_called_once_with(data)
                     mock_save_clean.assert_called_once_with(clean_data)
