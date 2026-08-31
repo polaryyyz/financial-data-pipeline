@@ -1,4 +1,8 @@
 import logging.config
+from pathlib import Path
+
+LOG_DIR = Path("logs")
+LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 config = {
      "version": 1,
