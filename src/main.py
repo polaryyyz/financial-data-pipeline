@@ -6,11 +6,13 @@ from src.extract import extract_companies_info
 from src.transform import transform_company_data
 from src.load import save_raw_data,save_clean_data
 
+logger = logging.getLogger(__name__)
+
 def main():
     result = extract_companies_info(*SYMBOLS)
 
     if result is None:
-        logging.error("Pipeline stopped: no data extracted")
+        logger.error("Pipeline stopped: no data extracted")
         return
 
     save_raw_data(result)

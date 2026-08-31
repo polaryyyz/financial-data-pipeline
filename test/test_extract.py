@@ -39,6 +39,32 @@ def test_extract_company_info_no_data():
 
                 assert data is None
 
+def test_extract_company_info_key_error():
+    with patch("src.extract.api_key", "test_api_key"):
+        with patch("src.extract.requests.get") as mock_get:
+            mock_response = MagicMock()
+            mock_response.status_code = 200
+            mock_response.raise_for_status.return_value = None
+
+            mock_response.json.return_value = [{
+                "symbol": "AAPL",
+                "companyName": "Apple Inc.",
+                "price": 310.34,
+                "marketCap": 4558074061040,
+                "sector": "Technology",
+                "country": "US",
+                "exchange": "NASDAQ"                
+            }]
+
+            mock_get.return_value = mock_response
+
+            with patch("src.extract.logger.error") as mock_logger:
+                data = extract_company_info("AAPL")
+
+                assert data is None
+                mock_logger.assert_called_once()
+                assert "Missing expected data for AAPL" in mock_logger.call_args[0][0]
+
 def test_extract_company_info_http_error():
     with patch("src.extract.api_key", "test_api_key"):
         with patch("requests.get") as mock_get:

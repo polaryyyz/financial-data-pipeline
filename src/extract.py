@@ -31,6 +31,8 @@ def extract_company_info(symbol):
 
         return essential
 
+    except KeyError as key_error:
+        logger.error(f"Missing expected data for {symbol}: {key_error}")
     
     except requests.exceptions.HTTPError as http_error:
         logger.error(f"HTTP Error for {symbol}: {http_error}")

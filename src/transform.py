@@ -3,6 +3,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 def transform_company_data(dataframe):
+    dataframe = dataframe.copy()
     duplicates = dataframe.duplicated().sum()
     if duplicates > 0:
         logger.warning(f"{duplicates} duplicate rows found")
