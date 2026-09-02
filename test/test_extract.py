@@ -8,16 +8,18 @@ def test_extract_company_info():
         with patch("requests.get") as mock_get:
             mock_response = MagicMock()
             mock_response.status_code = 200
-            mock_response.json.return_value = [{
-                "symbol": "AAPL",
-                "companyName": "Apple Inc.",
-                "price": 310.34,
-                "marketCap": 4558074061040,
-                "sector": "Technology",
-                "industry": "Consumer Electronics",
-                "country": "US",
-                "exchange": "NASDAQ"
-            }]
+            mock_response.json.return_value = [
+                {
+                    "symbol": "AAPL",
+                    "companyName": "Apple Inc.",
+                    "price": 310.34,
+                    "marketCap": 4558074061040,
+                    "sector": "Technology",
+                    "industry": "Consumer Electronics",
+                    "country": "US",
+                    "exchange": "NASDAQ"
+                }
+            ]
 
             mock_get.return_value = mock_response
 
@@ -46,15 +48,17 @@ def test_extract_company_info_key_error():
             mock_response.status_code = 200
             mock_response.raise_for_status.return_value = None
 
-            mock_response.json.return_value = [{
-                "symbol": "AAPL",
-                "companyName": "Apple Inc.",
-                "price": 310.34,
-                "marketCap": 4558074061040,
-                "sector": "Technology",
-                "country": "US",
-                "exchange": "NASDAQ"                
-            }]
+            mock_response.json.return_value = [
+                {
+                    "symbol": "AAPL",
+                    "companyName": "Apple Inc.",
+                    "price": 310.34,
+                    "marketCap": 4558074061040,
+                    "sector": "Technology",
+                    "country": "US",
+                    "exchange": "NASDAQ"                
+                }
+            ]
 
             mock_get.return_value = mock_response
 
@@ -108,28 +112,32 @@ def test_extract_companies_info():
     with patch("src.extract.api_key", "test_api_key"):
         with patch("requests.get") as mock_get:
             mock_response_1 = MagicMock()
-            mock_response_1.json.return_value = [{
-                "symbol": "AAPL",
-                "companyName": "Apple Inc.",
-                "price": 310.34,
-                "marketCap": 4558074061040,
-                "sector": "Technology",
-                "industry": "Consumer Electronics",
-                "country": "US",
-                "exchange": "NASDAQ"
-            }]
+            mock_response_1.json.return_value = [
+                {
+                    "symbol": "AAPL",
+                    "companyName": "Apple Inc.",
+                    "price": 310.34,
+                    "marketCap": 4558074061040,
+                    "sector": "Technology",
+                    "industry": "Consumer Electronics",
+                    "country": "US",
+                    "exchange": "NASDAQ"
+                }
+            ]
 
             mock_response_2 = MagicMock()
-            mock_response_2.json.return_value = [{
-                "symbol": "MSFT",
-                "companyName": "Microsoft Corporation",
-                "price": 487.31,
-                "marketCap": 3618544770500,
-                "sector": "Technology",
-                "industry": "Software - Infrastructure",
-                "country": "US",
-                "exchange": "NASDAQ"
-            }]
+            mock_response_2.json.return_value = [
+                {
+                    "symbol": "MSFT",
+                    "companyName": "Microsoft Corporation",
+                    "price": 487.31,
+                    "marketCap": 3618544770500,
+                    "sector": "Technology",
+                    "industry": "Software - Infrastructure",
+                    "country": "US",
+                    "exchange": "NASDAQ"
+                }
+            ]
 
             mock_get.side_effect = [mock_response_1, mock_response_2]
 
@@ -161,16 +169,18 @@ def test_extract_companies_info_missing_data():
     with patch("src.extract.api_key", "test_api_key"):
         with patch("requests.get") as mock_get:
             mock_response_1 = MagicMock()
-            mock_response_1.json.return_value = [{
-                "symbol": "AAPL",
-                "companyName": "Apple Inc.",
-                "price": 310.34,
-                "marketCap": 4558074061040,
-                "sector": "Technology",
-                "industry": "Consumer Electronics",
-                "country": "US",
-                "exchange": "NASDAQ"
-            }]
+            mock_response_1.json.return_value = [
+                {
+                    "symbol": "AAPL",
+                    "companyName": "Apple Inc.",
+                    "price": 310.34,
+                    "marketCap": 4558074061040,
+                    "sector": "Technology",
+                    "industry": "Consumer Electronics",
+                    "country": "US",
+                    "exchange": "NASDAQ"
+                }
+            ]
 
             mock_response_2 = MagicMock()
             mock_response_2.json.return_value = []
