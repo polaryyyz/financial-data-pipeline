@@ -22,3 +22,4 @@ def save_clean_data(dataframe):
 
     except OSError as os_err:
         logger.error(f"Error with input/output: {os_err}")
+        raise

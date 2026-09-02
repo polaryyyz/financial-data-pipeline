@@ -1,51 +1,51 @@
 symbol,companyName,price,marketCap,sector,industry,country,exchange
-AAPL,Apple Inc.,319.7,4695547713200.0,Technology,Consumer Electronics,US,NASDAQ
-MSFT,Microsoft Corporation,513.53,3813242691500.0,Technology,Software - Infrastructure,US,NASDAQ
-NVDA,NVIDIA Corporation,217.55,5269278550000.0,Technology,Semiconductors,US,NASDAQ
-GOOGL,Alphabet Inc.,346.59,4194470750615.0005,Communication Services,Internet Content & Information,US,NASDAQ
-META,"Meta Platforms, Inc.",578.02,1472498187191.0,Communication Services,Internet Content & Information,US,NASDAQ
-AVGO,Broadcom Inc.,368.79,1754547928200.0,Technology,Semiconductors,US,NASDAQ
-ORCL,Oracle Corporation,150.72,434144438400.0,Technology,Software - Infrastructure,US,NYSE
-CRM,"Salesforce, Inc.",256.0,209664000000.0,Technology,Software - Application,US,NYSE
-AMD,"Advanced Micro Devices, Inc.",465.58,759174748000.0,Technology,Semiconductors,US,NASDAQ
-INTC,Intel Corp.,89.47,451286657364.0,Technology,Semiconductors,US,NASDAQ
-AMZN,"Amazon.com, Inc.",266.43,2866014153000.0,Consumer Cyclical,Specialty Retail,US,NASDAQ
-TSLA,"Tesla, Inc.",348.75,1377404653658.0,Consumer Cyclical,Auto - Manufacturers,US,NASDAQ
-WMT,Walmart Inc.,103.09,820398467200.0,Consumer Defensive,Discount Stores,US,NASDAQ
-COST,Costco Wholesale Corporation,945.47,419296090130.0,Consumer Defensive,Discount Stores,US,NASDAQ
-HD,"The Home Depot, Inc.",330.19,329238062230.0,Consumer Cyclical,Home Improvement,US,NYSE
-MCD,McDonald's Corporation,265.0,188284090000.0,Consumer Cyclical,Restaurants,US,NYSE
-NKE,"NIKE, Inc.",39.6,58600524510.0,Consumer Cyclical,Apparel - Footwear & Accessories,US,NYSE
-LOW,"Lowe's Companies, Inc.",208.05,116655091350.0,Consumer Cyclical,Home Improvement,US,NYSE
-TGT,Target Corporation,163.14,74096719740.0,Consumer Defensive,Discount Stores,US,NYSE
-SBUX,Starbucks Corporation,107.85,122949000000.0,Consumer Cyclical,Restaurants,US,NASDAQ
-JPM,JPMorgan Chase & Co.,357.62,958246366200.0,Financial Services,Banks - Diversified,US,NYSE
-V,Visa Inc.,381.6,712465215718.0,Financial Services,Financial - Credit Services,US,NYSE
-MA,Mastercard Incorporated,595.3,522099530800.0,Financial Services,Financial - Credit Services,US,NYSE
-BAC,Bank of America Corporation,62.32,442259488800.0,Financial Services,Banks - Diversified,US,NYSE
-WFC,Wells Fargo & Company,86.68,262120320000.0,Financial Services,Banks - Diversified,US,NYSE
-GS,"The Goldman Sachs Group, Inc.",1033.99,305034287930.0,Financial Services,Financial - Capital Markets,US,NYSE
-MS,Morgan Stanley,214.767,338747693760.0,Financial Services,Financial - Capital Markets,US,NYSE
-BLK,"BlackRock, Inc.",1164.48,180488577600.0,Financial Services,Asset Management,US,NYSE
-C,Citigroup Inc.,132.84,227808644400.0,Financial Services,Banks - Diversified,US,NYSE
-AXP,American Express Company,333.2,225013292000.0,Financial Services,Financial - Credit Services,US,NYSE
-JNJ,Johnson & Johnson,268.04,645949171425.0,Healthcare,Drug Manufacturers - General,US,NYSE
-LLY,Eli Lilly and Company,1172.86,1104530349260.0,Healthcare,Drug Manufacturers - General,US,NYSE
-UNH,UnitedHealth Group Incorporated,392.95,356855343552.0,Healthcare,Medical - Healthcare Plans,US,NYSE
-MRK,"Merck & Co., Inc.",148.26,366175513200.0,Healthcare,Drug Manufacturers - General,US,NYSE
-ABBV,AbbVie Inc.,255.48,451380229909.0,Healthcare,Drug Manufacturers - General,US,NYSE
-PFE,Pfizer Inc.,27.96,159356342400.0,Healthcare,Drug Manufacturers - General,US,NYSE
-TMO,Thermo Fisher Scientific Inc.,622.18,231215153780.0,Healthcare,Medical - Diagnostics & Research,US,NYSE
-ABT,Abbott Laboratories,112.47,194616217849.0,Healthcare,Medical - Devices,US,NYSE
-AMGN,Amgen Inc.,432.42,233380533360.0,Healthcare,Drug Manufacturers - General,US,NASDAQ
-ISRG,"Intuitive Surgical, Inc.",372.6,131631382800.0,Healthcare,Medical - Instruments & Supplies,US,NASDAQ
-XOM,Exxon Mobil Corporation,156.7,649436882000.0,Energy,Oil & Gas Integrated,US,NYSE
-CVX,Chevron Corporation,201.88,402064208000.0,Energy,Oil & Gas Integrated,US,NYSE
-CAT,Caterpillar Inc.,800.25,368624759250.0,Industrials,Agricultural - Machinery,US,NYSE
-GE,GE Aerospace,342.58,355448165704.0,Industrials,Aerospace & Defense,US,NYSE
-HON,Honeywell International Inc.,217.43,68912264200.0,Industrials,Conglomerates,US,NASDAQ
-UPS,"United Parcel Service, Inc.",105.32,89469568123.0,Industrials,Integrated Freight & Logistics,US,NYSE
-RTX,RTX Corporation,211.71,285333867563.0,Industrials,Aerospace & Defense,US,NYSE
-DE,Deere & Company,630.33,170149657100.0,Industrials,Agricultural - Machinery,US,NYSE
-BA,The Boeing Company,209.82,165835433400.0,Industrials,Aerospace & Defense,US,NYSE
-LIN,Linde plc,489.51,226447326000.0,Basic Materials,Chemicals - Specialty,GB,NASDAQ
+AAPL,Apple Inc.,325.13,4775300056280,Technology,Consumer Electronics,US,NASDAQ
+MSFT,Microsoft Corporation,501.02,3720349061000,Technology,Software - Infrastructure,US,NASDAQ
+NVDA,NVIDIA Corporation,217.44,5266614240000,Technology,Semiconductors,US,NASDAQ
+AMZN,"Amazon.com, Inc.",254.92,2742199932000,Consumer Cyclical,Specialty Retail,US,NASDAQ
+GOOGL,Alphabet Inc.,335.02,4054449323036,Communication Services,Internet Content & Information,US,NASDAQ
+META,"Meta Platforms, Inc.",578.54,1473822880208,Communication Services,Internet Content & Information,US,NASDAQ
+AVGO,Broadcom Inc.,369.68,1758782174400,Technology,Semiconductors,US,NASDAQ
+ORCL,Oracle Corporation,141.261,406898072670,Technology,Software - Infrastructure,US,NYSE
+CRM,"Salesforce, Inc.",258.11,211392090000,Technology,Software - Application,US,NYSE
+AMD,"Advanced Micro Devices, Inc.",459.61,749440066000,Technology,Semiconductors,US,NASDAQ
+INTC,Intel Corp.,88.97,448764657491,Technology,Semiconductors,US,NASDAQ
+TSLA,"Tesla, Inc.",356.09,1406394331529,Consumer Cyclical,Auto - Manufacturers,US,NASDAQ
+WMT,Walmart Inc.,105.92,842919833600,Consumer Defensive,Discount Stores,US,NASDAQ
+COST,Costco Wholesale Corporation,939.96,416852520840,Consumer Defensive,Discount Stores,US,NASDAQ
+HD,"The Home Depot, Inc.",319.77,318848103090,Consumer Cyclical,Home Improvement,US,NYSE
+MCD,McDonald's Corporation,261.11,185520221660,Consumer Cyclical,Restaurants,US,NYSE
+NKE,"NIKE, Inc.",38.12,56410403897,Consumer Cyclical,Apparel - Footwear & Accessories,US,NYSE
+LOW,"Lowe's Companies, Inc.",200.057,112173360299,Consumer Cyclical,Home Improvement,US,NYSE
+TGT,Target Corporation,163.76,74378318160,Consumer Defensive,Discount Stores,US,NYSE
+SBUX,Starbucks Corporation,106.15,121011000000,Consumer Cyclical,Restaurants,US,NASDAQ
+JPM,JPMorgan Chase & Co.,354.95,951092074500,Financial Services,Banks - Diversified,US,NYSE
+V,Visa Inc.,372.67,695792484123,Financial Services,Financial - Credit Services,US,NYSE
+MA,Mastercard Incorporated,581.1,509645619600,Financial Services,Financial - Credit Services,US,NYSE
+BAC,Bank of America Corporation,61.99,439917614100,Financial Services,Banks - Diversified,US,NYSE
+WFC,Wells Fargo & Company,87.05,263239200000,Financial Services,Banks - Diversified,US,NYSE
+GS,"The Goldman Sachs Group, Inc.",1002.56,295762217920,Financial Services,Financial - Capital Markets,US,NYSE
+MS,Morgan Stanley,211.16,333058444800,Financial Services,Financial - Capital Markets,US,NYSE
+BLK,"BlackRock, Inc.",1128.1,174849859500,Financial Services,Asset Management,US,NYSE
+C,Citigroup Inc.,132.54,227294171400,Financial Services,Banks - Diversified,US,NYSE
+AXP,American Express Company,324.19,218928748900,Financial Services,Financial - Credit Services,US,NYSE
+JNJ,Johnson & Johnson,271.19,653540351435,Healthcare,Drug Manufacturers - General,US,NYSE
+LLY,Eli Lilly and Company,1159.9312,1092354768219,Healthcare,Drug Manufacturers - General,US,NYSE
+UNH,UnitedHealth Group Incorporated,396.3,359897627305,Healthcare,Medical - Healthcare Plans,US,NYSE
+MRK,"Merck & Co., Inc.",149.94,370324810800,Healthcare,Drug Manufacturers - General,US,NYSE
+ABBV,AbbVie Inc.,259.99,459348465532,Healthcare,Drug Manufacturers - General,US,NYSE
+PFE,Pfizer Inc.,28.55,162719012000,Healthcare,Drug Manufacturers - General,US,NYSE
+TMO,Thermo Fisher Scientific Inc.,600.5,223158410500,Healthcare,Medical - Diagnostics & Research,US,NYSE
+ABT,Abbott Laboratories,108.97,188559876047,Healthcare,Medical - Devices,US,NYSE
+AMGN,Amgen Inc.,438.12,236456868960,Healthcare,Drug Manufacturers - General,US,NASDAQ
+ISRG,"Intuitive Surgical, Inc.",369.25,130447901500,Healthcare,Medical - Instruments & Supplies,US,NASDAQ
+XOM,Exxon Mobil Corporation,164.57,682053782200,Energy,Oil & Gas Integrated,US,NYSE
+CVX,Chevron Corporation,211.05,420327180000,Energy,Oil & Gas Integrated,US,NYSE
+CAT,Caterpillar Inc.,779.16,358909924920,Industrials,Agricultural - Machinery,US,NYSE
+GE,GE Aerospace,331.09,343526572429,Industrials,Aerospace & Defense,US,NYSE
+HON,Honeywell International Inc.,209.98,66551061200,Industrials,Conglomerates,US,NASDAQ
+UPS,"United Parcel Service, Inc.",102.67,87218387383,Industrials,Integrated Freight & Logistics,US,NYSE
+RTX,RTX Corporation,205.16,276506052001,Industrials,Aerospace & Defense,US,NYSE
+DE,Deere & Company,676.08,182499294294,Industrials,Agricultural - Machinery,US,NYSE
+BA,The Boeing Company,205.66,162547494200,Industrials,Aerospace & Defense,US,NYSE
+LIN,Linde plc,486.76,225175176000,Basic Materials,Chemicals - Specialty,GB,NASDAQ
