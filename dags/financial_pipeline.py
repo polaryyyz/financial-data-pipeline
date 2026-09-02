@@ -44,7 +44,7 @@ def financial_pipeline():
     @task
     def validate():
         import pandas as pd
-        from src.validate import validate_company_data
+        from src.validate import validate_company_data, load_to_postgres
 
         data = pd.read_csv("data/staging/company_data_transformed.csv")
 
@@ -58,6 +58,7 @@ def financial_pipeline():
         data = pd.read_csv("data/staging/company_data_transformed.csv")
 
         save_clean_data(data)
+        load_to_postgres(data)
 
     extract() >> transform() >> validate() >> load()
 
