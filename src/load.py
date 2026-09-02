@@ -1,7 +1,17 @@
 import os
 import logging
 from pathlib import Path
-from sqlalchemy import create_engine
+from sqlalchemy import (
+    create_engine,
+    MetaData,
+    Table,
+    Column,
+    String,
+    Float,
+    BigInteger,
+    URL,
+)
+from sqlalchemy.dialects.postgresql import insert
 
 logger = logging.getLogger(__name__)
 
@@ -27,24 +37,51 @@ def save_clean_data(dataframe):
         raise
 
 def load_to_postgres(dataframe):
-    user = os.getenv("WAREHOUSE_USER")
-    password = os.getenv("WAREHOUSE_PASSWORD")
-    host = os.getenv("WAREHOUSE_HOST")
-    port = os.getenv("WAREHOUSE_PORT")
-    database = os.getenv("WAREHOUSE_DB")
-
-    connection_url = (
-        f"postgresql+psycopg2://{user}:{password}"
-        f"@{host}:{port}/{database}"
+    connection_url = URL.create(
+        drivername="postgresql+psycopg2",
+        username=os.getenv("WAREHOUSE_USER"),
+        password=os.getenv("WAREHOUSE_PASSWORD"),
+        host=os.getenv("WAREHOUSE_HOST"),
+        port=int(os.getenv("WAREHOUSE_PORT")),
+        database=os.getenv("WAREHOUSE_DB"),
     )
 
     engine = create_engine(connection_url)
 
-    dataframe.to_sql(
+    metadata = MetaData()
+
+    companies = Table(
         "companies",
-        engine,
-        if_exists="replace",
-        index=False,
+        metadata,
+        Column("symbol", String, primary_key=True),
+        Column("companyName", String),
+        Column("price", Float),
+        Column("marketCap", BigInteger),
+        Column("sector", String),
+        Column("industry", String),
+        Column("country", String),
+        Column("exchange", String),
+        Column("marketCap_billions", Float),
     )
 
-    logger.info("Company data loaded successfully into PostgreSQL")
+    metadata.create_all(engine)
+
+    records = dataframe.to_dict(orient="records")
+
+    insert_statement = insert(companies).values(records)
+
+    update_columns = {
+        column.name: insert_statement.excluded[column.name]
+        for column in companies.columns
+        if column.name != "symbol"
+    }
+
+    upsert_statement = insert_statement.on_conflict_do_update(
+        index_elements=["symbol"],
+        set_=update_columns,
+    )
+
+    with engine.begin() as connection:
+        connection.execute(upsert_statement)
+
+    logger.info("Company data upserted successfully into PostgreSQL")

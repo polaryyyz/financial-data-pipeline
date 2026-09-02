@@ -195,7 +195,7 @@ python -m pytest test/ -v
 - [x] Apache Airflow orchestration
 - [x] PostgreSQL data warehouse
 - [x] CSV and PostgreSQL loading
-- [ ] PostgreSQL UPSERT strategy
+- [X] PostgreSQL UPSERT strategy
 - [ ] Historical financial data storage
 - [ ] Automated pipeline scheduling
 - [ ] CI/CD with GitHub Actions
