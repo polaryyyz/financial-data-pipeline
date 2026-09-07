@@ -184,6 +184,33 @@ or from the project virtual environment:
 ```bash
 python -m pytest test/ -v
 ```
+## SQL Analytics
+
+The project includes analytical SQL queries stored in:
+
+```text
+sql/analytics.sql
+```
+
+The queries include:
+
+- Top 10 companies by market capitalization
+- Average market capitalization by sector
+- Number of companies by sector
+- Largest company in each sector
+- Historical price evolution
+- First vs latest snapshot price change
+
+The analytics demonstrate the use of:
+
+- Aggregate functions (`AVG`, `COUNT`)
+- `GROUP BY`
+- Common Table Expressions (CTEs)
+- Window functions
+- `ROW_NUMBER()`
+- `PARTITION BY`
+- `JOIN`
+- Historical snapshot analysis
 
 ## Current Progress
 
@@ -197,9 +224,9 @@ python -m pytest test/ -v
 - [x] CSV and PostgreSQL loading
 - [X] PostgreSQL UPSERT strategy
 - [X] Historical financial data storage
-- [ ] Automated pipeline scheduling
+- [X] Automated pipeline scheduling
 - [X] CI/CD with GitHub Actions
-- [ ] SQL analytics
+- [X] SQL analytics
 - [ ] Data visualization dashboard
 
 ## Future Improvements
