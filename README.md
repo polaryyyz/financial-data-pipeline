@@ -196,7 +196,7 @@ python -m pytest test/ -v
 - [x] PostgreSQL data warehouse
 - [x] CSV and PostgreSQL loading
 - [X] PostgreSQL UPSERT strategy
-- [ ] Historical financial data storage
+- [X] Historical financial data storage
 - [ ] Automated pipeline scheduling
 - [ ] CI/CD with GitHub Actions
 - [ ] SQL analytics
