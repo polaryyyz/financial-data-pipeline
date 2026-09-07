@@ -53,12 +53,23 @@ def financial_pipeline():
     @task
     def load():
         import pandas as pd
-        from src.load import save_clean_data, load_to_postgres
+        from src.load import (
+            save_clean_data,
+            load_to_postgres,
+            load_company_snapshots,
+        )
 
         data = pd.read_csv("data/staging/company_data_transformed.csv")
 
+        context = get_current_context()
+        pipeline_run_id = context["run_id"]
+
         save_clean_data(data)
         load_to_postgres(data)
+        load_company_snapshots(
+            data,
+            pipeline_run_id,
+        )
 
     extract() >> transform() >> validate() >> load()
 

@@ -43,3 +43,18 @@ def test_validate_company_data_duplicate_symbol():
 
     with pytest.raises(ValueError, match="Duplicate symbols found"):
         validate_company_data(dataframe)
+
+def test_validate_company_data_invalid_price():
+    dataframe = valid_dataframe()
+    dataframe.loc[0, "price"] = 0
+
+    with pytest.raises(ValueError, match="Invalid prices found"):
+        validate_company_data(dataframe)
+
+
+def test_validate_company_data_invalid_market_cap():
+    dataframe = valid_dataframe()
+    dataframe.loc[0, "marketCap"] = 0
+
+    with pytest.raises(ValueError, match="Invalid market caps found"):
+        validate_company_data(dataframe)
