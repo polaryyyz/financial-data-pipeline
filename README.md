@@ -198,7 +198,7 @@ python -m pytest test/ -v
 - [X] PostgreSQL UPSERT strategy
 - [X] Historical financial data storage
 - [ ] Automated pipeline scheduling
-- [ ] CI/CD with GitHub Actions
+- [X] CI/CD with GitHub Actions
 - [ ] SQL analytics
 - [ ] Data visualization dashboard
 

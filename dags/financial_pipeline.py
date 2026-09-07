@@ -1,11 +1,11 @@
-from airflow.sdk import dag, task
+from airflow.sdk import dag, task, get_current_context
 from datetime import datetime, timedelta
 
 
 @dag(
     dag_id="financial_pipeline",
     start_date=datetime(2026, 9, 1),
-    schedule=None,
+    schedule="0 22 * * 1-5",
     catchup=False,
 )
 def financial_pipeline():
