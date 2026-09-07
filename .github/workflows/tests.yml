@@ -13,7 +13,7 @@ permissions:
   contents: read
 
 jobs:
-  pytest:
+  unit-tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -34,6 +34,49 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements-dev.txt
 
-      - name: Run tests
+      - name: Run unit tests
         run: |
           python -m pytest test/ -v
+
+  integration-tests:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: test_user
+          POSTGRES_PASSWORD: test_password
+          POSTGRES_DB: test_db
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    env:
+      WAREHOUSE_USER: test_user
+      WAREHOUSE_PASSWORD: test_password
+      WAREHOUSE_HOST: localhost
+      WAREHOUSE_PORT: 5432
+      WAREHOUSE_DB: test_db
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+
+      - name: Run integration tests
+        run: |
+          python -m pytest integration_test/ -v
